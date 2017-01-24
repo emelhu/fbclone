@@ -1,0 +1,15 @@
+==================================================================================================
+SET TERM ^ ;
+ALTER PROCEDURE UJBELEPES (
+    MUNKAHELY$KOD Varchar(40),
+    IPCIM Integer,
+    PW Bigint DEFAULT NULL,
+    MAINFORMID Char(2) DEFAULT '',
+    RENDSZERID Smallint DEFAULT 0 )
+RETURNS (
+
+FBClone don't create 'DEFAULT' on procedures parameter.
+
+It's problem becauseall call of this procedure go wrong (include all other procedures of database if call this procedure without enought parameter)
+
+==================================================================================================
